@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="circle1"></div>
+        <div class="panel"></div>
+        <div class="circle2"></div>
+        <div class="circle3">
+            <span class="text"></span>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = ()=>{
+
+        function dashboardView (angle) {
+            if (angle > 360) angle = 360
+            if (angle < 0) angle = 0
+            circle1 = document.querySelector('.circle1')
+            circle2 = document.querySelector('.circle2')
+            text = document.querySelector ('.text')
+            circle1.style.transform = `rotate(${angle}deg)`
+            circle2.style.transform = `rotate(${angle}deg)`
+            text.innerHTML = Math.trunc (angle / 360 * 100) + '%'
+            if (angle > 180) {
+                circle2.style.visibility = 'visible'
+                circle1.style.transform = 'rotate(180deg)'
+            }
+            else circle2.style.visibility = 'hidden'
+        }
+
+        let x = 0
+
+        window.addEventListener('click',(event)=>{
+            x = event.pageX
+        })
+
+        window.addEventListener('mousemove', (event)=>{
+            let dx = x - event.pageX
+            console.log(dx)
+            dashboardView (dx)
+        })
+    }
+</script>
+
+</html>

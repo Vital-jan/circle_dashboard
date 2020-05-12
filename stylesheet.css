@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard {
+  width: 300px;
+  height: 300px;
+  display: block;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.circle1 {
+  border-radius: 100% 0 0 100% / 50% 0 0 50%;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: green;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+}
+
+.circle2 {
+  border-radius: 100% 0 0 100% / 50% 0 0 50%;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: green;
+  visibility: hidden;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+}
+
+.circle3 {
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.panel {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+}
+/*# sourceMappingURL=stylesheet.css.map */
